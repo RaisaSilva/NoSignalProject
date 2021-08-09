@@ -1,0 +1,17 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Disabler : MonoBehaviour
+{
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+    	collision.SendMessageUpwards("AddDamage", 3f);
+    	collision.gameObject.SetActive(false);
+
+    }
+
+
+
+}
